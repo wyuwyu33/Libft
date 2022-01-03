@@ -6,7 +6,7 @@
 /*   By: wyu <wyu@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/30 18:32:04 by wyu               #+#    #+#             */
-/*   Updated: 2022/01/02 03:20:57 by wyu              ###   ########.fr       */
+/*   Updated: 2022/01/03 16:17:20 by wyu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_itoa(int n)
 	if (n < 0)
 		sign *= -1;
 	size = ft_str_size(n, sign, base);
-	str = ft_calloc(size + 1, sizeof(char));
+	str = (char *)malloc((size + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
 	str[size--] = '\0';
